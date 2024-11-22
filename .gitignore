@@ -1,0 +1,17 @@
+# Игнорируем все файлы с расширениями .xlsx и .xls
+*.xlsx
+*.xls
+
+# Игнорируем кэшированные файлы Python
+__pycache__/
+*.py[cod]
+
+# Игнорируем системные файлы macOS
+.DS_Store
+/.DS_Store
+
+# Игнорируем некоторые файлы проекта
+/venv
+/.mypy_cache
+.mypy_cache
+/reports
