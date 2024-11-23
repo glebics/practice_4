@@ -9,8 +9,8 @@ class SpimexTradingResult(Base):
         "comment": "Таблица, содержащая результаты торгов СПбМТСБ (Санкт-Петербургской международной товарно-сырьевой биржи)"}
 
     pk_spimex_id = Column(Integer, primary_key=True, index=True,
-                comment="Уникальный идентификатор записи") # название иземенено на pk_spimex_id,
-                                                           # могут быть конфликты
+                          comment="Уникальный идентификатор записи")  # название иземенено на pk_spimex_id,
+    # могут быть конфликты
     exchange_product_id = Column(
         String, nullable=False, comment="Идентификатор биржевого продукта")
     exchange_product_name = Column(
