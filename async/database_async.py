@@ -1,4 +1,3 @@
-# async/database_async.py
 import logging
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker, declarative_base
@@ -23,8 +22,7 @@ metadata = MetaData(naming_convention=naming_convention)
 # Базовый класс для всех моделей с метаданными
 Base = declarative_base(metadata=metadata)
 
-# Создание асинхронного движка базы данных с использованием URL из async_settings
-# Например, "postgresql+asyncpg://user:password@localhost:5432/mydatabase_async"
+# Создание асинхронного движка базы данных
 ASYNC_DATABASE_URL = async_settings.async_database_url
 
 async_engine = create_async_engine(
@@ -46,9 +44,8 @@ AsyncSessionLocal = sessionmaker(
 
 logging.info("AsyncSessionLocal успешно создан.")
 
+
 # Функция для получения асинхронной сессии
-
-
 async def get_async_db():
     logging.info("Создание асинхронной сессии базы данных.")
     async with AsyncSessionLocal() as session:

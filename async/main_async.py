@@ -1,4 +1,3 @@
-# async/main_async.py
 import logging
 import asyncio
 from database_async import async_engine, Base, AsyncSessionLocal

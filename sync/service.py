@@ -10,7 +10,7 @@ from repository import Repository
 
 
 class SpimexService:
-    REPORTS_DIR = "reports"
+    REPORTS_DIR = "sync/reports"
     BASE_URL = "https://spimex.com/markets/oil_products/trades/results/"
 
     def __init__(self, repository: Repository):

@@ -1,4 +1,3 @@
-# async/service_async.py
 import os
 import logging
 import re
