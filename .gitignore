@@ -12,6 +12,7 @@ __pycache__/
 
 # Игнорируем некоторые файлы проекта
 /venv
+/env
 /.mypy_cache
 .mypy_cache
 /reports
