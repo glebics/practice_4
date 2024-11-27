@@ -1,3 +1,4 @@
+# database_async.py
 import logging
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker, declarative_base
@@ -43,18 +44,3 @@ AsyncSessionLocal = sessionmaker(
 )
 
 logging.info("AsyncSessionLocal успешно создан.")
-
-
-# Функция для получения асинхронной сессии
-async def get_async_db():
-    logging.info("Создание асинхронной сессии базы данных.")
-    async with AsyncSessionLocal() as session:
-        try:
-            yield session
-        except Exception as e:
-            logging.error(
-                f"Ошибка во время работы с асинхронной сессией базы данных: {e}")
-            raise
-        finally:
-            await session.close()
-            logging.info("Асинхронная сессия базы данных закрыта.")
